@@ -1,5 +1,5 @@
-import PageObject.MainPage;
-import PageObject.QuestionAboutImportant;
+import page.object.MainPage;
+import page.object.QuestionAboutImportant;
 import org.hamcrest.MatcherAssert;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -23,7 +23,7 @@ public class QuestionsAboutImportantTest {
         this.answer = answer;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name="Проверка вопрос {0} и ответа {1}")
     public static Object[][] getQuestionAndAnswer() {
         return new Object[][]{
                 {"Сколько это стоит? И как оплатить?", "Сутки — 400 рублей. Оплата курьеру — наличными или картой."},

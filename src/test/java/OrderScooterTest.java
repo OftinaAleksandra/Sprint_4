@@ -1,7 +1,7 @@
-import PageObject.ConfirmationOrder;
-import PageObject.MainPage;
-import PageObject.PersonScooter;
-import PageObject.RentScooter;
+import page.object.ConfirmationOrder;
+import page.object.MainPage;
+import page.object.PersonScooter;
+import page.object.RentScooter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,6 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -37,7 +36,7 @@ public class OrderScooterTest {
         this.comment = comment;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name="Проверка заказа для клиента {0} {1} c номером телефона {3}")
     public static Object[][] getPersonalData() {
         return new Object[][]{
                 {"Иванов", "Иван","Москва, ул. Академика Королёва, 12","89889999999","Сокольники","сутки", "серая безысходность", "Позвонить заранее"},
